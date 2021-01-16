@@ -1,6 +1,7 @@
 // Problem : Reverse An Array 
 // Approach : Access the first half of the entered array and Swap the first half with the second half .
 // Modification : Make it enable to reverse text arrays also or any type of string...
+// Difficulty : Unable to dynamically identify typeof entered data and use it's type to use function template 
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -42,7 +43,7 @@ int main()
     cin >> t;
     while (t--)
     {
-        solve<char>();
+        solve<int>();
         cout << endl;
     }
 }
