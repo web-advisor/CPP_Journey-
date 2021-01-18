@@ -30,3 +30,22 @@ int main(){
     }
     return 0;
 }
+
+/*
+
+Given an unsorted array arr[] of size N, rotate it by D elements (clockwise). 
+void rotate(int arr[], int n,int d)
+{
+    int helpArr[d];
+    for(int i=0;i<d;i++){
+        helpArr[i]=arr[i];
+    }
+    for(int i=0;i<n-d;i++){     
+        arr[i]=arr[(i+d)%n];  
+    }
+    for(int i=0;i<d;i++){
+        arr[n-d+i]=helpArr[i];
+    }             
+}
+
+*/
