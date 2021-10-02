@@ -23,7 +23,7 @@ int main(){
     }
     insertionSort(myarr, n);
     for(auto i:myarr){
-        cout << i<<" ";
+        cout <<i<<" ";
     }
     return 0;
 }
