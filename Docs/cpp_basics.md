@@ -33,3 +33,241 @@ Then a program called <b>Loader</b> loads this and all linked files on the CPU a
 <br />
 
 ---
+# Errors In C++
+- Compiler Errors : 
+    - Syntax Errors :
+        - Occurs when rules of Programming Language are misused.
+        - Ex. cin<<a;
+    - Semantic Errors : 
+        - Occurs when it is syntactically correct but has no meaning.
+        - Ex. x + y = z; // Expression on the left side of Assignment Operator. 
+    - Type Errors : 
+        - When we pass Wrong type of values to our objects or variables. 
+        - Ex. int a = 3.14;
+- RunTime Errors: 
+    - Linker Errors : 
+        - When the program is compiled successfully, and trying to link the different object file with the main object file. 
+        - When this error is occurred, the executable is not generated.
+        - Ex. int Main()    // main function written as Main
+    - RunTime Errors :     
+        - When the program is executing.
+        - Ex. if we try to divide a number with 0.
+- Logical Errors : 
+    - When we get output but we may not get correct output due to some logical issues.
+    - Ex. If we put a semicolon after a loop, that is syntactically correct, but will create one blank loop.    
+---
+<br />
+
+---
+
+# Operators in C++ 
+
+
+<style>
+    th,td,table{
+        border:1px black solid;
+    }
+</style>
+<table>
+        <thead>
+            <tr>
+                <th>Precedence</th>
+                <th>Operators</th>
+                <th>Associativity</th>
+                <th>Symbols</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>I<sup>st</sup></td>
+                <td>Parenthesis/Brackets Operators and Postfix Operators</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>()</strong> For function recognition</li>
+                        <li><strong>[]</strong> For array recognition</li>
+                        <li><strong>-> .</strong> For Structure Pointer</li>
+                        <li><strong>Postfix ++</strong> Uses the value then increments by 1</li>
+                        <li><strong>Postfix --</strong> Uses the value then decrements by 1</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>II<sup>nd</sup></td>
+                <td>Unary Operators</td>
+                <td>Right to Left</td>
+                <td>
+                    <ul>
+                        <li><strong>!</strong> Logical Not | Negates the Boolean result</li>
+                        <li><strong>~</strong> Bitwise Not | Inverses each bit</li>
+                        <li><strong>+</strong> defines positive integer</li>
+                        <li><strong>-</strong> defines negative integer</li>
+                        <li><strong>*(var)</strong> value at address var</li>
+                        <li><strong>&var</strong> Address of var</li>
+                        <li><strong>Prefix ++</strong> Increments the value by 1 then Uses the value</li>
+                        <li><strong>Prefix --</strong> Uses the value then decrements by 1 Increments the value by 1 then Uses the value</li>
+                        <li><strong>sizeof(var)</strong> returns an integer constant size of var</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>III<sup>rd</sup></td>
+                <td>Multiplication Binary Operators</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>*</strong> Multiplication</li>
+                        <li><strong>/</strong> Division</li>
+                        <li><strong>%</strong> Modulo Operation</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>IV<sup>th</sup></td>
+                <td>Additive Binary Operators</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>+</strong> Addition</li>
+                        <li><strong>-</strong> Substraction</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>V<sup>th</sup></td>
+                <td>Bitwise Shift Operators</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>>></strong> Right Shift Operator: New_Value = Old_Value/(2^value)</li>
+                        <li><strong><<</strong> Left Shift Operator: New_Value = Old_Value * (2^value)</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>VI<sup>th</sup></td>
+                <td>Relational Operators</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>>=</strong> Greater than or equal to</li>
+                        <li><strong><=</strong> Smaller than or equal to</li>
+                        <li><strong><</strong> Smaller than</li>
+                        <li><strong><</strong> Greater than</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>VII<sup>th</sup></td>
+                <td>Equality Operators</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>!=</strong> Not equal to comparison</li>
+                        <li><strong>==</strong> Equal to comparison</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>VIII<sup>th</sup></td>
+                <td>Bitwise AND</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>&</strong> Bitwise & in the representation of two numbers</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>IX<sup>th</sup></td>
+                <td>Bitwise XOR</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>^</strong> Bitwise EX-OR in the binary representation of two numbers</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>X<sup>th</sup></td>
+                <td>Bitwise OR</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>|</strong> Bitwise OR in the binary representation of two numbers</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>XI<sup>th</sup></td>
+                <td>Logical AND</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>&&</strong> Logical AND of two boolean values</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>XII<sup>th</sup></td>
+                <td>Logical OR</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>||</strong> Logical OR of two boolean values</li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>XIII<sup>th</sup></td>
+                <td>Conditional/Ternary Operator</td>
+                <td>Right to Left</td>
+                <td>
+                    <ul>
+                        <li><strong>? :</strong> (Condition) ? true : false </li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>XIV<sup>th</sup></td>
+                <td>Assignment Operators</td>
+                <td>Right to Left</td>
+                <td>
+                    <ul>
+                        <li><strong>L = R</strong></li>
+                        <li><strong>L += R</strong></li>
+                        <li><strong>L -= R</strong></li>
+                        <li><strong>L *= R</strong></li>
+                        <li><strong>L %= R</strong></li>
+                        <li><strong>L /= R</strong></li>
+                        <li><strong>L >>= R</strong></li>
+                        <li><strong>L <<= R</strong></li>
+                        <li><strong>L &= R</strong></li>
+                        <li><strong>L |= R</strong></li>
+                        <li><strong>L ^= R</strong></li>
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>XV<sup>th</sup></td>
+                <td>Comma Operator</td>
+                <td>Left to Right</td>
+                <td>
+                    <ul>
+                        <li><strong>,</strong>
+                            <ul>
+                                <li><strong>Used as separator</strong> Ex. int a=3,b=4;</li>
+                                <li><strong>Used as Operator</strong> It evaluates rest of the operands and rejects them.  Ex. int var=(printf("Hello World"),10); --> this prints 'Hello World' and assigns 10 to var.</li>
+                            </ul>  
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+---
+<br />
+
+---
+
