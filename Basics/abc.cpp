@@ -7,39 +7,21 @@ int main()
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
 #endif
-    int r,c,i,j,mid=1;
-    cin>>r;
-    cin>>c;
+    int n,coef;
+    cin>>n;
 
-    if(r==c){
-        mid=r/2;
-        for(i=0;i<r;i++){
-            if(i==mid){
-                for(j=0;j<c;j++){
-                    cout<<"*";
-                    cout<<" ";
-                }
-                cout<<endl;
-            }else{
-                for(j=0;j<c;j++){
-                    if(j==mid){
-                        cout<<"* ";
-                    }else if(i==0 && j>mid){
-                        cout<<"*";
-                    }else if(i==(r-1) && j<mid){
-                        cout<<"*";
-                    }else if(i<mid && j==0){
-                        cout<<"*";
-                    }else if(i>mid && j==(c-1)){
-                        cout<<"*";
-                    }else{
-                        cout<<" ";
-                    }
-                    cout<<" ";
-                }
-                cout<<endl;
-            }
+    cout<<"Pascal's Triangle :  "<<endl;
+    for(int i=1;i<=n;i++){
+        coef=1;
+        for(int k=n-i;k>0;k--){
+            cout<<" ";
         }
+        for(int j=1;j<=i;j++){
+            cout<<coef<<" ";
+            coef=coef*(i-j)/j;
+        }
+        cout<<endl;
     }
-    return 0;
+
+    return 0;   
 }

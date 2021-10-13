@@ -1,7 +1,7 @@
 # How Compilation Works in C++? 
     Compilation involves changing C++ Source Code to Machine Code.
 
-![How Compilation works](images/CompilationWorking.png)    
+![How Compilation works](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/CompilationWorking.png)    
 Starting with <b>C++ Source Code</b>, Code written in C++ Program. It is High Level Language. 
     
 Then a Program called <b>Preprocessor</b> (a macro processing program) takes source file as input and does some processing :
