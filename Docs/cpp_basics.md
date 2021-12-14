@@ -131,11 +131,6 @@ The C++ parser recognizes these kinds of tokens:
 # Operators in C++ 
 
 
-<style>
-    th,td,table{
-        border:1px black solid;
-    }
-</style>
 <table>
         <thead>
             <tr>
