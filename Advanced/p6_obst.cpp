@@ -50,3 +50,4 @@ int sum(int freq[], int i, int j)
 	s += freq[k];
 	return s;
 }
+	

@@ -59,6 +59,74 @@ Then a program called <b>Loader</b> loads this and all linked files on the CPU a
 <br />
 
 ---
+# C++ Tokens :  
+    The text of a C++ program consists of tokens and white space. A token is the smallest element of a C++ program that is meaningful to the compiler. 
+
+The C++ parser recognizes these kinds of tokens:
+
+- Keywords
+    - Special name with meaning reserved by programming language.
+    - Ex. break, if, else, while, int, etc.
+- Identifiers
+    - Building blocks of the program such as variables, classes, object, structures, pointers, functions, etc.
+    - Can contain : 
+        - letter or a digit [ underscore('_') counted as a letter ]
+        - first character must be a letter
+        - upper and lower case letters are considered different
+        - cannot be keywords
+        - identifiers should not be longer than 31 characters
+        Ex. _chk, child, stu1, etc.
+- Literals 
+    - Data items which never change their value during the programme.
+    - Types : 
+        - Integer Constant Literals : 
+            - Must have atleast one digit.
+            - no decimal point 
+            - \+ or - sign could be given
+            - Types 
+                - Decimal Integer Constants : 
+                    - Number consisting of a sequence of digits.
+                    - Ex. 4123, -11, 38, etc.
+                - Octal Integer Constants : 
+                    - Sequence of digits starting with zero in base 8.
+                    - Ex. 023, 0143, etc.
+                - Hexadecimal Integer Constants : 
+                    - Sequence of digits starting with '0x' or '0X' in base 16.
+                    - Ex. 0xC, 0X143, etc.
+        - Float Constant Literals : 
+            - Number having fractional parts. 
+            - In fractional form
+                - At least one digit before and after decimal point
+                - \+ or - sign allowed.
+                - Ex. -7.6, 4.23, etc.
+            - In Exponential form 
+                - Having a mantissa and an exponent.
+                - Mantissa must be an integer or a real constant.
+                - Exponent must be an integer.
+                - Format : [Mantissa]E[Exponent]
+                - Ex. 2.22E03, 1.52E05, 143E02, etc.
+        - Character Constant Literals : 
+            - Atleast one character within single quotes.
+            - Non-graphic characters can be represented via escape sequences[ represented by backslash('\') ] Ex. '\b','\0',etc.
+        - String Constant Literals : 
+            - Sequence of characters between double quotes.
+            - Treated as an array of characters
+            - Each string is followed by a null character.
+            - Ex. "abc" -> "abc\0" ->  4 bytes 
+- Operators
+    - Unary Operators : 
+        - Performs operation on a single operand.
+        - Ex. ++,--, etc.
+    - Binary Operators : 
+        - Performs operation on two operands.
+        - Ex. +, *, -, /, %, etc. 
+- Punctuators
+    - Ex. {}, [], (), etc.
+
+---
+<br />
+
+---
 
 # Operators in C++ 
 
@@ -265,6 +333,26 @@ Then a program called <b>Loader</b> loads this and all linked files on the CPU a
             </tr>
         </tbody>
     </table>
+
+## Why Precedence ? 
+    Operator with higher precedence will be evaluated first in an expression. 
+
+## Why Associativity ? 
+    When Precedence of operators are same and we need to decide which operator will be evaluated first. It does not help when there is just one operator of a given category.
+
+## Short Circuit in && logical operation
+    If there is a condition anywhere in the expression that returns false then the rest of the conditions after that will not be evaluated.
+
+    Ex. incr = (a<b) && (b++); 
+        if(a<b) is false then b++ is not evaluated and hence value is not modified. 
+
+
+## Short Circuit in || logical operation
+    If there is a condition anywhere in the expression that returns true then the rest of the conditions after that will not be evaluated.
+
+    Ex. incr = (a<b) && (b++); 
+        if(a<b) is true then b++ is not evaluated and hence value is not modified. 
+
 
 ---
 <br />

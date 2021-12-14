@@ -139,3 +139,86 @@
       1 2 1 
      1 3 3 1 
     1 4 6 4 1 
+
+## Hollow Diamond Pattern :
+    int n;
+    cin >> n;
+    cout << "Hollow Diamond Pattern :  " << endl;
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < 2*n; j++)
+        {
+            if(i+j<=n-1){
+                cout<<"*";
+            }else{
+                cout<<" ";
+            }
+            if(i+n<=j){
+                cout<<"*";
+            }else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < 2*n; j++)
+        {
+            if(i>=j){
+                cout<<"*";
+            }else{
+                cout<<" ";
+            }
+            if(i>=(2*n-1)-j){
+                cout<<"*";
+            }else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
+    Output : 
+    Hollow Diamond Pattern :  
+    * * * * *  * * * * *
+    * * * *      * * * *
+    * * *          * * *
+    * *              * *
+    *                  *
+    *                  *
+    * *              * *
+    * * *          * * *
+    * * * *      * * * *
+    * * * * *  * * * * *
+
+## Diagonal and Borders of a Rhombus : 
+    cout << "Diagonal and Borders of a Rhombus :  " << endl;
+    int i, j, n;
+    cin >> n; // ‘n’ must be odd
+    int num1 = n / 2 * 3;
+    for (i = 0; i < n; i++)
+    {
+        for (j = 0; j < n; j++)
+        {
+            // center horizontal, center vertical, upper left diagonal, bottom left diagonal, upper right diagonal, bottom right diagonal
+            if (i == n / 2 || j == n / 2 || i + j == n / 2 || i - j == n / 2 || j - i == n / 2 || i + j == num1)
+                cout << "*";
+            else
+                cout << " ";
+        }
+        cout << "\n";
+    }
+    Output : 
+    Diagonal and Borders of a Rhombus :  
+        *    
+       ***   
+      * * *  
+     *  *  * 
+    *********
+     *  *  * 
+      * * *  
+       ***   
+        *    
+
+        
+
