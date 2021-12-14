@@ -354,3 +354,26 @@ The C++ parser recognizes these kinds of tokens:
 
 ---
 
+# Control Statements :
+
+### Conditional Statements 
+- if - else
+- switch case
+
+### Iteration Statements 
+- for loop
+- while loop
+- do while loop
+
+### Jump Statements 
+- break
+- continue
+- goto
+
+## Constraints with Switch Statements :
+- duplicate cases generates error
+- only those expressions are allowed in switch which results in an integral constant value.
+- Float value is not allowed as a const value in case label, only integer const allowed.
+- Variables are not allowed as case labels.
+- Macros are allowed as case labels.
+- default case can be defined anywhere, it will be evaluated last.
