@@ -377,3 +377,37 @@ The C++ parser recognizes these kinds of tokens:
 - Variables are not allowed as case labels.
 - Macros are allowed as case labels.
 - default case can be defined anywhere, it will be evaluated last.
+
+
+
+---
+<br />
+
+---
+
+# Functions :
+
+Functions provide Code Reuseability and Abstraction in the program. 
+Name of the function represents the initial address of the function i.e., &functionName;
+
+    Functions are global by default. They can be easily accessed from outside. Also, reuse of the same function in another file is possible.
+
+    To restrict access by an external file, static keyword is used.
+
+---
+<br />
+
+---
+
+# Static and Dynamic Scoping : 
+
+## Stack
+- Stack is a container(or memory segment) that holds data. Data is processed in LIFO(Last In First Out) manner.
+- Operations possible are push and pop.
+- Stack memory segment stores <strong>Activation Record</strong> of functions as they are called and pop them out as their return statement is encountered.
+- <strong>Activation Record</strong> contains:
+    - Local variables of the called function 
+    - Return address of the calling function
+    - Parameters of called function
+
+![Activation Record](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/activationRecord.png) 
