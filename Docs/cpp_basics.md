@@ -409,5 +409,52 @@ Name of the function represents the initial address of the function i.e., &funct
     - Local variables of the called function 
     - Return address of the calling function
     - Parameters of called function
+         ![Activation Record](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/activationRecord.png) 
 
-![Activation Record](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/activationRecord.png) 
+
+## Static Scoping 
+In Static Scoping, definition of a variable is resolved by searching it's containing block or function, if it fails, then search in outer containing block is done and so on. 
+
+Compiler prefers the variable definition which is nearer to the variable usage. 
+
+Used in C, C++.
+
+## Dynamic Scoping 
+In Dynamic Scoping, definition of a variable is resolved by searching it's containing block or function, if it fails, then search is done in the calling function and so on. 
+
+---
+<br />
+
+---
+
+# Recursion : 
+A function calling itself is called Recursion. It must have a base condition to prevent infinite calling of function. 
+
+A recursive function have two phases : 
+- <strong>Calling Phase</strong>
+    - Ascending Phase
+    - Statements executed before the recursive function call.
+- <strong>Returning Phase</strong>
+    - Descending Phase
+    - Statements executed after recursive function call.
+
+![Phases of Recursion](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/RecursionPhases.png) 
+
+
+## Recurrance Relation 
+- Used for formation of Recursive function
+- Helps in computing time complexity using mathematical induction principle of successive substitution. 
+- In recurrance relation, all constants are replaced by 1.
+
+## Types of Recursion 
+- <strong>Tail Recursion :</strong> No statements in the returning phase. Recursive call is last thing in the function. 
+- <strong>Head Recursion :</strong> No statements in the calling phase. Recursive call is the first thing in the function. 
+- <strong>Linear Recursion :</strong> When only one recursive call is present in the function.
+- <strong>Tree Recursion :</strong> When more than one recursive call is present in the function. 
+- <strong>Indirect Recursion :</strong> When one function calls another function which in turn calls the original function.
+- <strong>Nested Recursion :</strong> When there is a recursive function call inside the recursive call of the function. 
+    
+    Ex. return (fun(fun(n-1)));
+
+
+
