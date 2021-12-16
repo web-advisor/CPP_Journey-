@@ -482,7 +482,7 @@ In this case, when there are two recursive calls, the first call is k/a Left Cal
 - In region
 - Right Call 
 - Post region 
-    ![Tree Recursion]('https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/TreeRecursion.png')
+    ![Tree Recursion](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/TreeRecursion.png)
 
 
 
