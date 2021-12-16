@@ -438,13 +438,24 @@ A recursive function have two phases :
     - Descending Phase
     - Statements executed after recursive function call.
 
-![Phases of Recursion](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/RecursionPhases.png) 
+
+    ![Phases of Recursion](https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/RecursionPhases.png) 
 
 
 ## Recurrance Relation 
 - Used for formation of Recursive function
 - Helps in computing time complexity using mathematical induction principle of successive substitution. 
 - In recurrance relation, all constants are replaced by 1.
+
+## Intuition 
+- High Level Thinking 
+    - Expectation i.e. O/P for f(n)
+    - Faith i.e. O/P for f(n-1)
+    - Expectation in terms of Faith 
+- Low Level Thinking 
+    - Dry Run 
+    - Build Stack/Tree  
+    - Identify base case
 
 ## Types of Recursion 
 - <strong>Tail Recursion :</strong> No statements in the returning phase. Recursive call is last thing in the function. 
@@ -455,6 +466,23 @@ A recursive function have two phases :
 - <strong>Nested Recursion :</strong> When there is a recursive function call inside the recursive call of the function. 
     
     Ex. return (fun(fun(n-1)));
+
+## Solving Code in Linear Recursion 
+
+In this case, there is a single recursive call in the function body which divides the function body into two parts. 
+- Pre region 
+- Recusive Call
+- Post region
+
+## Solving Code in Tree Recursion (two recursive calls)
+
+In this case, when there are two recursive calls, the first call is k/a Left Call while the second call is k/a Right Call. The function body is divided into three regions as in a tree.
+- Pre region 
+- Left Call
+- In region
+- Right Call 
+- Post region 
+    ![Tree Recursion]('https://raw.githubusercontent.com/web-advisor/CPP_Journey-/master/Docs/Images/TreeRecursion.png')
 
 
 
